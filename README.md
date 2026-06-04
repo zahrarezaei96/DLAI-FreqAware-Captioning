@@ -15,6 +15,7 @@ passing to a Transformer decoder for caption generation.
 
 ## Architecture
 
+```
 Image → FFT decomposition
           ├── Low frequency  → Spatial ResNet-18 → (B, 49, 256)
           └── High frequency → Spatial ResNet-18 → (B, 49, 256)
@@ -24,6 +25,7 @@ Image → FFT decomposition
                               Transformer Decoder
                                         ↓
                                     Caption
+```
 
 Decoding is performed with beam search (beam size = 5).
 
@@ -44,6 +46,7 @@ with performance degrading for both smaller and larger values.
 
 ## Repository Structure
 
+```
 ├── DLAI.ipynb          # Main notebook (Cells 1-11)
 ├── results/
 │   ├── bleu_scores.json
@@ -53,6 +56,7 @@ with performance degrading for both smaller and larger values.
 │   ├── cutoff_analysis.png
 │   └── cutoff_analysis.json
 └── README.md
+```
 
 ## Requirements
 
