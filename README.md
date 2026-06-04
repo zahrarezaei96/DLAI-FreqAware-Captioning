@@ -2,6 +2,7 @@
 
 Project for the Deep Learning and Applied AI course (2025/2026)  
 Sapienza University of Rome — Prof. Emanuele Rodolà
+
 GitHub: https://github.com/zahrarezaei96/DLAI-FreqAware-Captioning
 
 ## Idea
