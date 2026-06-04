@@ -2,6 +2,7 @@
 
 Project for the Deep Learning and Applied AI course (2025/2026)  
 Sapienza University of Rome — Prof. Emanuele Rodolà
+GitHub: https://github.com/zahrarezaei96/DLAI-FreqAware-Captioning
 
 ## Idea
 
@@ -15,14 +16,14 @@ passing to a Transformer decoder for caption generation.
 ## Architecture
 
 Image → FFT decomposition
-├── Low frequency  → Spatial ResNet-18 → (B, 49, 256)
-└── High frequency → Spatial ResNet-18 → (B, 49, 256)
-↓
-Fusion (concat + linear)
-↓
-Transformer Decoder
-↓
-Caption
+          ├── Low frequency  → Spatial ResNet-18 → (B, 49, 256)
+          └── High frequency → Spatial ResNet-18 → (B, 49, 256)
+                                        ↓
+                               Fusion (concat + linear)
+                                        ↓
+                              Transformer Decoder
+                                        ↓
+                                    Caption
 
 Decoding is performed with beam search (beam size = 5).
 
