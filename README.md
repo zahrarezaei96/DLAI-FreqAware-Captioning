@@ -17,15 +17,18 @@ We evaluate on two datasets: **Flickr8k** (semantic-focused) and **CLEVR**
 structure-aware domains.
 
 ## Architecture
+
+```
 Image → FFT decomposition
-├── Low frequency  → Spatial ResNet-18 → (B, 49, 256)
-└── High frequency → Spatial ResNet-18 → (B, 49, 256)
-↓
-Fusion (concat + linear)
-↓
-Transformer Decoder
-↓
-Caption
+          ├── Low frequency  → Spatial ResNet-18 → (B, 49, 256)
+          └── High frequency → Spatial ResNet-18 → (B, 49, 256)
+                                        ↓
+                               Fusion (concat + linear)
+                                        ↓
+                              Transformer Decoder
+                                        ↓
+                                    Caption
+```
 
 Decoding is performed with beam search (beam size = 5).
 
@@ -67,6 +70,7 @@ FFT cutoff sensitivity analysis showed that cutoff=20 yields the
 best BLEU-4, with performance degrading for both smaller and larger values.
 
 ## Repository Structure
+```
 ├── DLAI.ipynb              # Flickr8k experiment (Cells 1-11)
 ├── DLAI_CLEVR.ipynb        # CLEVR experiment (Cells 1-11)
 ├── results/
@@ -81,6 +85,7 @@ best BLEU-4, with performance degrading for both smaller and larger values.
 │   ├── cutoff_analysis.png
 │   └── cutoff_analysis.json
 └── README.md
+```
 
 ## Requirements
 
